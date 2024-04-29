@@ -1,0 +1,259 @@
+/*Importação das folhas de estilo principal*/
+@import url('style.css');   
+   
+/* Estilos para o container da tela de Login */
+.container {
+    width: 686px;
+    height: 1024px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--cor-div);
+    box-shadow: 0 2px 4px var(--cor-azul);
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Estilos para o título h2 */
+h2 {
+    color: var(--cor-fonte);
+    font-weight: normal;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 78px;
+    margin-bottom: 78px;
+}
+
+/* Estilos para o formulário */
+form {
+    padding: 0 0 0 20px;
+    border-radius: 8px;
+}
+
+.grupo-form {
+    margin-bottom: 42px; /* Espaçamento uniforme entre grupos de formulários */
+}
+
+/* Estilos para o label */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 36px;  
+}
+
+.pergunta {
+    padding: 10px;
+    margin: 0 16px 42px;
+}
+
+/* Estilos para o input */
+input {
+    width: 596px;
+    height: 74px;
+    margin: 0 0 0 25px;
+    padding: 10px;
+    border: 1px solid var(--cor-fonte);
+    border-radius: 4px;
+    box-sizing: border-box;   
+    background-color: var(--cor-placeholder);
+    color: #888;
+    font-size: 36px;
+}
+
+/* Estilo opcional para melhorar a aparência do toggle switch */
+
+.crp {
+    display: flex;
+    align-items: center;
+    margin: 0 6px 42px;
+}
+
+.toggle-container {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    left: -4px;
+    bottom: -4px;
+    background-color: var(--cor-verde);
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: var(--cor-cinza);
+}
+
+input:focus + .toggle-slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(26px);
+}
+
+/* Remove o estilo padrão do checkbox */
+input[type="checkbox"] {
+    display: none;
+}
+
+
+/* Estilos para o botão */
+
+.botao-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 104px;
+    padding: 10px;
+    background-color: var(--cor-azul);
+    color: var(--cor-div);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 36px;
+}
+
+button:hover {
+    background-color: var(--cor-placeholder);
+}
+
+/* Estilos para a div que contém os links */
+.link {
+    text-align: center; /* Centralizar horizontalmente */
+}
+
+/* Estilos para os links */
+.link a {
+    display: block; /* Para ocupar toda a largura disponível */
+    margin-bottom: 10px; /* Espaço entre os links */
+    color: var(--cor-fonte);
+    font-size: 32px;
+    text-decoration: none;
+}
+
+/* Estilos para a tela de Login em telas menores */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Reduz a largura para caber em telas menores */
+        height: auto; /* Altura automática para acomodar o conteúdo */
+        margin: 20px auto; /* Margem reduzida */
+        padding: 10px; /* Espaçamento interno reduzido */
+    }
+
+    h2 {
+        font-size: 32px; /* Reduz o tamanho do título */
+        margin-top: 40px; /* Espaçamento superior reduzido */
+        margin-bottom: 40px; /* Espaçamento inferior reduzido */
+    }
+
+    .grupo-form {
+        margin-bottom: 30px; /* Reduz o espaçamento entre os grupos de formulários */
+        display: flex; /* Adiciona display flex para alinhar os itens horizontalmente */
+        align-items: center; /* Alinha os itens verticalmente */
+    }
+
+    label {
+        font-size: 24px; /* Reduz o tamanho do rótulo */
+        margin-right: 10px; /* Adiciona margem direita para separar os elementos */
+    }
+
+    input {
+        flex: 1; /* Faz com que o campo CRP ocupe o restante do espaço disponível */
+        height: 50px; /* Altura reduzida */
+        font-size: 24px; /* Reduz o tamanho da fonte */
+    }
+
+    .toggle-container {
+        width: 50px; /* Reduz a largura do toggle switch */
+        height: 28px; /* Reduz a altura do toggle switch */
+        margin-left: 10px; /* Adiciona margem esquerda para separar os elementos */
+    }
+
+    .toggle-slider {
+        width: 50px; /* Reduz a largura do slider */
+        height: 28px; /* Reduz a altura do slider */
+        border-radius: 28px; /* Ajusta o raio da borda */
+    }
+
+    .toggle-slider:before {
+        height: 32px; /* Ajusta a altura do botão */
+        width: 32px; /* Ajusta a largura do botão */
+        left: -3px; /* Ajusta a posição do botão */
+        bottom: -3px; /* Ajusta a posição do botão */
+    }
+
+    button {
+        width: 60px; /* Reduz a largura do botão */
+        height: 60px; /* Reduz a altura do botão */
+        margin-bottom: 60px; /* Reduz o espaçamento inferior */
+        font-size: 24px; /* Reduz o tamanho da fonte */
+    }
+}
+
+/* Estilos adicionais para telas em modo retrato */
+@media screen and (max-width: 480px) and (orientation: portrait) {
+    h2 {
+        font-size: 28px; /* Reduz ainda mais o tamanho do título */
+        margin-top: 20px; /* Reduz o espaçamento superior */
+        margin-bottom: 20px; /* Reduz o espaçamento inferior */
+    }
+
+    .crp {
+        margin: 0 -2px 16px;
+    }
+
+    .toggle-container {
+        width: 25px; /* Reduz a largura do toggle switch */
+        height: 14px; /* Reduz a altura do toggle switch */
+        margin-left: 5px; /* Adiciona margem esquerda para separar os elementos */
+    }
+    
+    .toggle-slider {
+        width: 25px; /* Reduz a largura do slider */
+        height: 14px; /* Reduz a altura do slider */
+        border-radius: 14px; /* Ajusta o raio da borda */
+    }
+    
+    .toggle-slider:before {
+        height: 18px; /* Ajusta a altura do botão */
+        width: 18px; /* Ajusta a largura do botão */
+        left: -2px; /* Ajusta a posição do botão */
+        bottom: -2px; /* Ajusta a posição do botão */
+    }
+    
+
+    input {
+        font-size: 20px; /* Reduz ainda mais o tamanho da fonte */
+    }
+
+    button {
+        width: 50px; /* Reduz ainda mais a largura do botão */
+        height: 50px; /* Reduz ainda mais a altura do botão */
+        margin-bottom: 40px; /* Reduz ainda mais o espaçamento inferior */
+        font-size: 20px; /* Reduz ainda mais o tamanho da fonte */
+    }
+}

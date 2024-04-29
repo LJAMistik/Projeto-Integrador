@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Cadastro</title>
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="/public/css/cadastro.css">
+
+</head>
+<body>
+    <div class="container">
+        <h2>Faça seu cadastro</h2>
+        <form id="formularioLogin">
+            <div class="grupo-form">
+                <label for="nome"></label>
+                <input type="text" id="nome" name="nome" placeholder="Nome" required>
+            </div>
+            <div class="grupo-form">
+                <label for="usuario"></label>
+                <input type="text" id="usuario" name="usuario" placeholder="Email" required>
+            </div>
+            <div class="grupo-form">
+                <label for="data-nasc"></label>
+                <input type="text" id="data-nasc" name="data-nasc" placeholder="Data de Nascimento" required>
+            </div>
+            <div class="grupo-form">
+                <label for="senha"></label>
+                <input type="password" id="senha" name="senha" placeholder="Senha" required>
+            </div>
+            <label for="profissional" class="pergunta">Você é um profissional?</label>
+            <div class="crp">
+                <label class="toggle-container">
+                    <input type="checkbox">
+                    <span class="toggle-slider"></span>
+                </label>
+                <input type="text" name="crp" id="crp" placeholder="CRP">
+            </div>
+            <div class="botao-container">
+                <button type="submit">></button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
